@@ -25,24 +25,26 @@ Por favor ten en cuenta lo siguiente:
 **1.- ¿Las capas de la aplicación (por ejemplo capa de persistencia, vistas, red, negocio, etc) y qué clases pertenecen a cual?**
 
 - **Capa de Persistencia o Datos:** Es aquella que permite mantener una informacion para ser consultada. Entre las clases del proyectos que puedan calificar aca son:
-  -  Movies y Movie (Clase Modelo para almacenar las Peliculas obtenidos desde el server)
+  -  Movies y Movie (Clase Modelo para almacenar las Peliculas y Series obtenidos desde el server)
   -  Videos y Video (Clase Modelo para almacenar los Videos obtenidos desde el server)
   -  SingletonCache (Clase Modelo para almacenar en cache las peliculas y los Videos)
   -  Api (Clase Modelo Estatica para almacenar las api_key y token de la apk)
   -  Urls (Clase Modelo Estatica para almacenar las rutas de conexion para obtener las respuestas del server)
   
 - **Capa de Presentacion o vistas:** Estas por lo general con las que el usuario final termina viendo. como su nomre lo indica sin simples vistas. En este caso las clases correspondientes a esta capa serian: 
-  -  DialogDetailMovie (Permite Mostrar los detales de una Movie selecionada)
+  -  DetalleActivity (Permite Mostrar los detales de una Movie selecionada)
   -  MainActivity (Permite Mostrar todas las categorias y los listados de las movies por categorias)
   -  YoutubeActivity (Permite Mostrar un video en youtube pasandole los datos de la movie)
+  -  SplashActivity (Permite muestrar la presentación)
   
 - **Capa de Negocio:**  Esta capa es la que permite la iteracion entre los datos y las vistas. Podria denominarse un controlador. Entre las clases tenemos:
-  -  ListMoviesFragment (Permite unir la vista .xml con el controlador .java)
+  -  FragmentContent (Permite unir la vista .xml con el controlador .java)
   -  AdapterItemVideo (Encargada de pasar la informacion de los modelos videos a las vistas)
   -  AdapterItemMovie (Encargada de pasar la informacion de los modelos movies a las vistas)
-  
+
 - **Capa de Red:** Es la que te permite mantener conexion online. Entre ellas estan:
   -  AsyncTask **[son las que hacen las conexiones al server o obtienen la informacion]**
+  -  DownloadJSON **[(Permite cargar todos los datos de peliculas y Series)]**
 
 
 **Responda y escriba dentro del Readme con las siguientes preguntas:** 
