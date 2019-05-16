@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <Button
+            android:layout_width="match_parent"
+            android:id="@+id/btnClose"
+            android:text="Cerrar"
+            android:background="@color/colorPrimary"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/textColorPrimary"
+            android:layout_height="?android:attr/actionBarSize" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_above="@id/btnClose"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imgPoster"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/btnClose"
+                tools:ignore="NotSibling" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_alignParentBottom="true"
+                android:layout_height="wrap_content">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:id="@+id/rvVideos"
+                    android:paddingLeft="10dp"
+                    android:background="@drawable/background_gradient_title"
+                    android:paddingRight="10dp"
+                    android:scrollbars="horizontal"
+                    android:layout_height="wrap_content">
+                </androidx.recyclerview.widget.RecyclerView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:background="@drawable/background_gradient_title"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:text="The Avenger"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textAlignment="center"
+                        android:paddingBottom="8dp"
+                        android:paddingTop="8dp"
+                        android:textColor="@color/textColorPrimary"
+                        android:textStyle="bold"
+                        android:id="@+id/txtTitle"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:text="High schoolers Mitsuha and Taki are complete strangers living separate lives. But one night, they suddenly switch places. Mitsuha wakes up in Taki’s body, and he in hers. This bizarre occurrence continues to happen randomly, and the two must adjust their lives around each other."
+                        android:textAlignment="center"
+                        android:textSize="12sp"
+                        android:textColor="@color/textColorPrimary"
+                        android:id="@+id/txtOverview"
+                        android:layout_height="wrap_content" />
+
+                    <RatingBar
+                        android:id="@+id/rating"
+                        style="@style/Widget.AppCompat.RatingBar.Indicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:numStars="5"
+                        android:layout_margin="4dp"
+                        android:rating="1"
+                        android:stepSize="1" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:text="Adulto"
+                            android:id="@+id/txtType"
+                            android:layout_weight="1"
+                            android:textAlignment="center"
+                            android:textColor="@color/textColorPrimary"
+                            android:textStyle="bold"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:layout_width="0dp"
+                            android:text="01-12-2018"
+                            android:layout_weight="1"
+                            android:textAlignment="center"
+                            android:textStyle="bold"
+                            android:textColor="@color/textColorPrimary"
+                            android:id="@+id/txtDate"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

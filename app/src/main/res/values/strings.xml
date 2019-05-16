@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MoviesRappi</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="nav_popular">Popular</string>
+    <string name="nav_top_rated">Top Rated</string>
+    <string name="nav_upcoming">Upcoming</string>
+</resources>

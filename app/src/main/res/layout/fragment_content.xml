@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/contentPreview"
+        android:layout_weight=".33">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:scaleType="centerCrop"
+                android:id="@+id/previewImage"
+                android:layout_height="match_parent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_gradient_title"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/txtTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Titlulo"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/textColorPrimary" />
+
+                <TextView
+                    android:id="@+id/txtSubTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sub-Titulo"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/textColorPrimary" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:text="Lo Mas Popular"
+        android:id="@+id/txtTipo"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/textColorPrimary"
+        android:textStyle="bold"
+        android:layout_height="wrap_content" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.66">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:id="@+id/txtEmpty"
+            android:textColor="@color/textColorPrimary"
+            android:text="Buscando..."
+            android:layout_height="match_parent" />
+
+        <com.example.moviesrappi.adapters.GridRecyclerView
+            android:layout_width="match_parent"
+            android:id="@+id/rvItems"
+            android:layoutAnimation="@anim/grid_layout_animation_from_bottom"
+            android:layout_height="match_parent"/>
+    </FrameLayout>
+
+</LinearLayout>
